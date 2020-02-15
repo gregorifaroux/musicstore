@@ -1,0 +1,30 @@
+[
+  {
+    "id": 0,
+    "title": "Second Edition",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/61ppivmm6lL.jpg",
+    "artist": "Public Image Ltd",
+    "description": "Metal Box is the second album by Public Image Ltd, released by Virgin Records on 23 November 1979.[4] The album takes its name from the round metal canister which contained the initial pressings of the record. It was later reissued in standard vinyl packaging as Second Edition in February 1980 by Virgin Records in the United Kingdom, and by Warner Bros. Records and Island Records in the United States."
+  },
+  {
+    "id": 1,
+    "title": "London Calling",
+    "image": "https://m.media-amazon.com/images/I/81HnXVYKHxL._SS500_.jpg",
+    "artist": "The Clash",
+    "description": "London Calling is the third studio album by English rock band the Clash. It was originally released as a double album in the United Kingdom on 14 December 1979 by CBS Records, and in the United States in January 1980 by Epic Records."
+  },
+  {
+    "id": 2,
+    "title": "To Bring You My Love",
+    "image": "https://m.media-amazon.com/images/I/716Xz+AVm6L._SS500_.jpg",
+    "artist": "PJ Harvey",
+    "description": "To Bring You My Love is the third studio album by English alternative rock musician PJ Harvey. It was released by Island Records in February 1995. Recorded after the break-up of the PJ Harvey trio it stands as her first proper solo album. "
+  },
+  {
+    "id": 3,
+    "title": "Forces of Victory",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/71QCbkOZCpL._SX522_.jpg",
+    "artist": "LKJ",
+    "description": "Forces of Victory is an album by dub poet Linton Kwesi Johnson, released in 1979 on the Island Records label. It was produced by Linton Kwesi Johnson and Dennis Bovell. "
+  }
+]

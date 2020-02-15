@@ -1,0 +1,38 @@
+{
+  "name": "nodejsstarter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.mjs",
+  "scripts": {
+    "dev": "nodemon --experimental-modules -w src src/index.mjs ",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint 'src/**/*.{js,mjs}' --fix",
+    "format": "prettier-eslint 'src/**/*.{js,mjs}' --write"
+  },
+  "author": "gregori faroux",
+  "license": "ISC",
+  "lint-staged": {
+    "src/**/*.{js,mjs}": [
+      "eslint --fix",
+      "prettier-eslint --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.1",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.7",
+    "nodemon": "^2.0.2",
+    "prettier-eslint-cli": "^5.0.0"
+  },
+  "dependencies": {
+    "winston": "^3.2.1"
+  }
+}

@@ -1,0 +1,78 @@
+.gridflow {
+  display: grid;
+  grid-gap: 15px;
+  overflow: hidden;
+  /*   grid-template-columns: repeat(auto-fill, 200px); */
+  grid-template-columns: repeat(auto-fit, minmax(35ch, 1fr));
+  /*   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr) 150px); */
+  grid-auto-flow: dense;
+}
+
+.card {
+  background: grey;
+  border-radius: 5px;
+  background-size: cover;
+  background-position: center center;
+  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.5s;
+  will-change: transform;
+  border: 15px solid white;
+}
+
+.card:hover {
+  box-shadow: 0px 30px 100px -10px rgba(0, 0, 0, 0.4);
+}
+
+.box {
+  max-width: 400px;
+  max-height: 400px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.box0 {
+  background-color: red;
+}
+
+.box1 {
+  background-color: blue;
+}
+
+.box2 {
+  background-color: green;
+}
+
+.box3 {
+  background-color: purple;
+}
+
+.box4 {
+  background-color: yellow;
+}
+
+.box5 {
+  background-color: orange;
+}
+
+img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  opacity: 0.75;
+  overflow: hidden;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  transition-timing-function: ease-in;
+  transition: 1.5s;
+}
+
+img:hover {
+  opacity: 1;
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+  -moz-transform: scale(1.25);
+  -webkit-transform: scale(1.25);
+  transform: scale(1.25);
+  transition-timing-function: ease-in;
+  transition: 1.5s;
+}
