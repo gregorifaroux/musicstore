@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Music store demo NodeJS React",
   "engines": {
-    "node": "12.x"
+    "node": "v10.17.0"
   },
   "main": "server.js",
   "scripts": {
