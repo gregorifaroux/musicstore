@@ -1,3 +1,4 @@
+/* eslint-disable import/extensions */
 import express from 'express';
 import cors from 'cors';
 import rateLimit from 'express-rate-limit';
@@ -55,6 +56,7 @@ app.use((error, req, res, next) => {
 });
 
 // Static files
+// eslint-disable-next-line no-underscore-dangle
 const __dirname = path.resolve();
 app.use(express.static(path.join(__dirname, '../client/build')));
 

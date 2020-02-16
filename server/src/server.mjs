@@ -1,3 +1,4 @@
+/* eslint-disable import/extensions */
 import dotenv from 'dotenv';
 import app from './app.mjs';
 import logger from './logger.mjs';

@@ -15,7 +15,7 @@
   "license": "ISC",
   "lint-staged": {
     "src/**/*.{js,mjs}": [
-      "eslint --fix",
+      "eslint 'src/**/*.{js,mjs}' --fix",
       "prettier-eslint --write",
       "git add"
     ]
