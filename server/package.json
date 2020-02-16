@@ -5,7 +5,7 @@
   "main": "index.mjs",
   "scripts": {
     "start": "nodemon --experimental-modules -w src src/server.mjs",
-    "prod": "NODE_ENV=production node --experimental-modules -w src src/server.mjs",
+    "prod": "NODE_ENV=production node --experimental-modules  src/server.mjs",
     "dev": "nodemon --experimental-modules -w src src/index.mjs ",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint 'src/**/*.{js,mjs}' --fix",
