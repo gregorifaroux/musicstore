@@ -24,6 +24,7 @@
     "prebuild": "npm run lint"
   },
   "eslintConfig": {
+    "root": true,
     "extends": [
       "react-app",
       "airbnb",
