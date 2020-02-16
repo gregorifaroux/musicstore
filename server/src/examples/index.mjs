@@ -1,6 +1,7 @@
 import http from 'http';
 import { promises as fs, readFileSync } from 'fs';
 import path from 'path';
+import url from 'url';
 import logger from './logger';
 
 // eslint-disable-next-line no-underscore-dangle
@@ -21,7 +22,7 @@ fs.readFile(filenameIn, 'utf-8')
 logger.info(`Reading ${filenameIn} ...`);
 
 const data = readFileSync(`${__dirname}/dev-data/data.json`, 'utf-8');
-// const dataObj = JSON.parse(data);
+const dataObj = JSON.parse(data);
 
 const server = http.createServer((request, response) => {
   // Set CORS headers
@@ -36,10 +37,18 @@ const server = http.createServer((request, response) => {
     return;
   }
 
+  const { pathname, query } = url.parse(request.url, true);
   //
-  switch (request.url) {
+  switch (pathname) {
     case '/product':
-      response.end('A product');
+      response.writeHead(200, {
+        'Content-type': 'application/json',
+      });
+      if (dataObj[query.id]) {
+        response.end(JSON.stringify(dataObj[query.id]));
+      } else {
+        response.end("{error: 'product not found'}");
+      }
       break;
     case '/overview':
     case '/':

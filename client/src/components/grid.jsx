@@ -15,9 +15,10 @@ function Grid() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(async () => {
     async function fecthAlbums() {
-      const result = await axios(`${BASE_URL}`);
+      const result = await axios(`${BASE_URL}/albums`);
+      console.log(JSON.stringify(result));
 
-      const data = result.data.map(a => ({
+      const data = result.data.albums.map(a => ({
         ...a,
         flipped: false
       }));
