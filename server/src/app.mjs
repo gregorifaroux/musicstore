@@ -5,12 +5,18 @@ import helmet from 'helmet';
 import xss from 'xss-clean';
 import mongoSanitize from 'express-mongo-sanitize';
 import hpp from 'hpp';
+import morgan from 'morgan';
+import dotenv from 'dotenv';
 
 import albumRouter from './routes/albumRoutes';
 
 const app = express();
 
 // GLOBAL
+dotenv.config({ path: './config.env' });
+if (process.env.NODE_ENV === 'development') {
+  app.use(morgan('dev'));
+}
 // Security HTTP Headers
 app.use(helmet());
 
