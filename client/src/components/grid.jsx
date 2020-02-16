@@ -39,16 +39,20 @@ function Grid() {
     const boxClass = `box box${i % 6} card`;
     return (
       <div className={boxClass}>
-        <Flipcard
-          flipped={albums[i].flipped}
-          onClick={() => flip(i)}
-          className={boxClass}
-        >
+        <Flipcard flipped={albums[i].flipped} onClick={() => flip(i)}>
           <img alt={`${album.title} cover`} src={album.image} />
           <div className="card__details">
-            <h3 className="card__heading">{album.title}</h3>
             <h4 className="card__sub-heading">{album.artist}</h4>
-            <p className="card__text">{album.description}</p>
+            <p className="card__text">
+              <iframe
+                title={album.title}
+                scrolling="no"
+                allowTransparency="true"
+                src={`https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=true&width=200&height=200&color=ff0000&layout=dark&size=medium&type=tracks&id=${album.deezerId}&app_id=1`}
+                width="200"
+                height="200"
+              />
+            </p>
           </div>
         </Flipcard>
       </div>

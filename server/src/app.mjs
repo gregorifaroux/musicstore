@@ -7,6 +7,7 @@ import mongoSanitize from 'express-mongo-sanitize';
 import hpp from 'hpp';
 import morgan from 'morgan';
 import dotenv from 'dotenv';
+import path from 'path';
 
 import albumRouter from './routes/albumRoutes';
 
@@ -52,6 +53,10 @@ app.use((error, req, res, next) => {
     next();
   }
 });
+
+// Static files
+const __dirname = path.resolve();
+app.use(express.static(path.join(__dirname, '../client/build')));
 
 // ROUTES
 app.use('/api/v1/albums', albumRouter);
