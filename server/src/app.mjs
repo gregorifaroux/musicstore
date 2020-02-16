@@ -9,7 +9,7 @@ import morgan from 'morgan';
 import dotenv from 'dotenv';
 import path from 'path';
 
-import albumRouter from './routes/albumRoutes';
+import albumRouter from './routes/albumRoutes.mjs';
 
 const app = express();
 

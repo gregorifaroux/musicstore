@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
-import app from './app';
-import logger from './logger';
+import app from './app.mjs';
+import logger from './logger.mjs';
 
 const result = dotenv.config({ path: './config.env' });
 if (result.error) {
